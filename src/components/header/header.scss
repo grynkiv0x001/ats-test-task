@@ -1,9 +1,30 @@
 .header {
-  width: 100%;
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.72);
 
-  &__menu-icon {
-    width: 24px;
-    height: 24px;
+  @include responsive('large') {
+    // padding: 18px 120px;
+    &__left {
+      margin-left: 120px;
+    }
+
+    &__right {
+      margin-right: 120px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 24px;
   }
 }

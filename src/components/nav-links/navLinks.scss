@@ -1,0 +1,9 @@
+.nav-links {
+  display: none;
+
+  @include responsive('large') {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}

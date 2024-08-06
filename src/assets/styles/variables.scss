@@ -1,0 +1,16 @@
+:root {
+  --clr-main-red: #F9484B;
+  --clr-white: #FFFFFF;
+  --clr-blue: #4C84FF;
+  --clr-blue--dimmed: #2D69EB;
+}
+
+$mobile: 568px;
+$tablet: 768px;
+$desktop: 992px;
+
+$breakpoints: (
+  "small": $mobile,
+  "medium": $tablet,
+  "large": $desktop,
+);

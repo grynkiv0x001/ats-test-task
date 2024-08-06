@@ -3,11 +3,13 @@ export const cards = [
     title: 'Mastercard',
     commision: 3,
     logo: 'mastercard',
+    label: 'popular'
   },
   {
     title: 'Visa',
     commision: 3,
     logo: 'visa',
+    label: 'trusted'
   },
   {
     title: 'Skrill',

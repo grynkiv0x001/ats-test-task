@@ -6,6 +6,13 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import \'src/assets/styles/include.scss\';',
+      },
+    },
+  },
   resolve: {
     alias: {
       src: path.resolve(__dirname, 'src'),

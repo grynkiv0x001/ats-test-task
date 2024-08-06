@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 
-import Logo from '@/assets/logo.svg?react';
-import Menu from '@/assets/menu.svg?react';
-import Plus from '@/assets/plus.svg?react';
-import ArrowDown from '@/assets/arrow-down.svg?react';
-
-import user from '@/mock/user';
+import Logo from '@/assets/icons/logo.svg?react';
+import Menu from '@/assets/icons/menu.svg?react';
 
 import { IconButton } from '@/components/shared';
+import UserProfile from '@/components/user-profile/UserProfile';
+import NavLinks from '@/components/nav-links/NavLinks';
 
 import './header.scss';
 
@@ -16,25 +14,17 @@ const Header = (props) => {
 
   return (
     <header className="header">
-      <IconButton onClick={openSidebar}>
-        <Menu />
-      </IconButton>
-      <div>
-        <Logo />
-      </div>
-      <div>
-        125.02 $
-        <div>13%</div>
-        <IconButton>
-          <ArrowDown />
+      <div className="header__left">
+        <IconButton onClick={openSidebar}>
+          <Menu />
         </IconButton>
-        <IconButton>
-          <Plus />
-        </IconButton>
+        <div>
+          <Logo />
+        </div>
       </div>
-
-      <div>
-        <img src={user.profile.image} />
+      <div className="header__right">
+        <NavLinks />
+        <UserProfile />
       </div>
     </header>
   );
