@@ -5,6 +5,8 @@ import Menu from '@/assets/menu.svg?react';
 import Plus from '@/assets/plus.svg?react';
 import ArrowDown from '@/assets/arrow-down.svg?react';
 
+import user from '@/mock/user';
+
 import { IconButton } from '@/components/shared';
 
 import './header.scss';
@@ -29,6 +31,10 @@ const Header = (props) => {
         <IconButton>
           <Plus />
         </IconButton>
+      </div>
+
+      <div>
+        <img src={user.profile.image} />
       </div>
     </header>
   );
