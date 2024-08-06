@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -28,6 +28,6 @@ module.exports = {
     'no-undef':'warn',
     'no-console':'warn',
     'object-curly-spacing': ['error','always'],
-    'react/jsx-tag-spacing': [2, {'beforeSelfClosing':'always' }]
+    'react/jsx-tag-spacing': [2, {'beforeSelfClosing':'always' }],
   },
 }
