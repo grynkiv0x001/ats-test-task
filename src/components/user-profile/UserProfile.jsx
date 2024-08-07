@@ -10,7 +10,7 @@ import './userProfile.scss';
 const UserProfile = () => {
   return (
     <div className="user-profile">
-      <button className="user-profile__balance-btn">
+      <div className="user-profile__balance-btn">
         <p>{user.balance} $</p>
         <div className="balance-btn--rate">
           {user.rate}%
@@ -21,7 +21,7 @@ const UserProfile = () => {
         <IconButton className="balance-btn--add">
           <Plus />
         </IconButton>
-      </button>
+      </div>
       <div className="user-profile__photo">
         <img src={user.profile.image} />
       </div>

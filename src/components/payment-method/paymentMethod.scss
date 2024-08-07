@@ -1,3 +1,70 @@
 .payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
+  &__section {
+    &__body {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      column-gap: 20px;
+
+      @include responsive('medium') {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 18px;
+      }
+    }
+  }
+}
+
+.payment-method-item {
+  position: relative;
+  padding: 14px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+
+  background-color: var(--clr-gray);
+  border-radius: 4px;
+  box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.02), 4px 4px 5px rgba(0, 0, 0, 0.05);
+
+  @include responsive('medium') {
+    flex-basis: 172px;
+  }
+
+  &__label {
+    min-width: 78px;
+    padding: 2px 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    font-size: 8px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--trusted {
+      background-color: var(--clr-main-red);
+    }
+
+    &--popular {
+      background-color: var(--clr-blue--dimmed);
+    }
+  }
+
+  &__title {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  &__comission {
+    font-size: 8px;
+    opacity: 0.5;
+  }
 }

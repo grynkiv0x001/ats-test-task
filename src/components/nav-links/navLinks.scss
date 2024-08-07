@@ -6,4 +6,22 @@
     align-items: center;
     gap: 24px;
   }
+
+  &__notification {
+    position: relative;
+
+    &--unread {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        border: 2px solid var(--clr-main-bg);
+        border-radius: 50%;
+      }
+    }
+  }
 }

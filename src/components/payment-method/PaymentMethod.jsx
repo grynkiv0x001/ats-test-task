@@ -1,20 +1,36 @@
+import { cards, crypto } from '@/mock/payment-options';
+
+import PaymentMethodItem from './PaymentMethodItem';
+
+import './paymentMethod.scss';
+
 const PaymentMethod = () => {
   return (
     <div className="payment-method">
-      <h2>Choose Payment Method</h2>
+      <h3>Choose Payment Method</h3>
 
       <section className="payment-method__section">
-        <h3 className="payment-method__section__title">
+        <h4 className="payment-method__section__title">
           Cards, E-money, PIN
-        </h3>
+        </h4>
 
+        <div className="payment-method__section__body">
+          {cards.map(item => (
+            <PaymentMethodItem key={item.id} card={item} />
+          ))}
+        </div>
       </section>
 
       <section className="payment-method__section">
-        <h3 className="payment-method__section__title">
+        <h4 className="payment-method__section__title">
           Cryptocurrency
-        </h3>
+        </h4>
 
+        <div className="payment-method__section__body">
+          {crypto.map(item => (
+            <PaymentMethodItem key={item.id} card={item} />
+          ))}
+        </div>
       </section>
     </div>
   );

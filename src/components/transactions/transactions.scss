@@ -1,5 +1,37 @@
 .transactions {
+  margin-top: 8px;
 
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    &--desktop {
+      display: none;
+
+      @include responsive('medium') {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      @include responsive('medium') {
+        display: none;
+      }
+    }
+  }
+
+  &__filter-btn {
+    width: 24px;
+    height: 24px;
+    background-color: var(--clr-gray);
+    border-radius: 4px;
+
+    // TODO: Change the IconButton size using props
+    @include responsive('medium') {
+      width: 42px;
+      height: 42px;
+    }
+  }
 }
 
 .transaction-item {
