@@ -1,0 +1,16 @@
+.input {
+  padding: 8px 12px;
+  background-color: var(--clr-gray);
+  border: none;
+  border-radius: 4px;
+  color: var(--clr-white);
+  font-size: 14px;
+
+  &:focus {
+    outline: 1px solid var(--clr-blue);
+  }
+
+  @include responsive('medium') {
+    font-size: 16px;
+  }
+}

@@ -1,4 +1,6 @@
 .app {
+  position: relative;
+
   &__body {
     padding: 24px 20px 12px;
     display: flex;
@@ -6,7 +8,7 @@
     gap: 24px;
 
     @include responsive('large') {
-      padding: 32px 120px 0;
+      padding: 32px 120px 12px;
     }
   }
 }

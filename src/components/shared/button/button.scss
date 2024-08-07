@@ -8,4 +8,9 @@
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px solid var(--clr-white);
+  }
 }

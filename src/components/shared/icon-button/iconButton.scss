@@ -7,4 +7,10 @@
 
   background: none;
   border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px solid var(--clr-blue);
+    border-radius: 4px;
+  }
 }

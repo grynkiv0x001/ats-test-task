@@ -5,7 +5,7 @@ const PaymentMethodItem = (props) => {
   const { title, logo, comission, label } = card;
 
   return (
-    <div className="payment-method-item">
+    <button className="payment-method-item">
       {label && (
         <div
           className={
@@ -16,7 +16,7 @@ const PaymentMethodItem = (props) => {
         </div>
       )}
       <img
-        src={`/src/assets/payment-options-logo/${logo}.png`}
+        src={`/src/assets/payment-options-logo/${logo}.svg`}
         alt="Payment method logo"
       />
       <p className="payment-method-item__title">
@@ -25,7 +25,7 @@ const PaymentMethodItem = (props) => {
       <p className="payment-method-item__comission">
         Comission {comission} %
       </p>
-    </div>
+    </button>
   );
 };
 

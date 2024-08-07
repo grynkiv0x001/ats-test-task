@@ -1,3 +1,39 @@
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--clr-main-bg);
+  z-index: 1;
 
+  @include responsive('medium') {
+    max-width: 600px;
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.02), 4px 4px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  &__header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__link {
+      color: var(--clr-white);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--clr-blue);
+      }
+    }
+  }
 }

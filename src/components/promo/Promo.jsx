@@ -1,4 +1,4 @@
-import { Button } from '@/components/shared';
+import { Button, Input } from '@/components/shared';
 
 import './promo.scss';
 
@@ -11,8 +11,10 @@ const Promo = () => {
       </p>
 
       <form className="promo__form">
-        <input type="text" className="promo__form__input" />
-        <Button className="promo__form__submit">Apply</Button>
+        <Input type="text" className="promo__form__input" />
+        <Button className="promo__form__submit">
+          Apply
+        </Button>
       </form>
     </div>
   );
