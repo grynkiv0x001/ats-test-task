@@ -20,7 +20,7 @@ const TransactionItem = (props) => {
     <div className="transaction-item">
       <div className="transaction-item__header">
         <img
-          src={`/src/assets/payment-options-logo/${method.logo}.svg`}
+          src={`/public/payment-options-logo/${method.logo}.svg`}
           alt="Payment method logo"
           className="transaction-item__header__logo"
         />
@@ -39,7 +39,7 @@ const TransactionItem = (props) => {
             className="transaction-item__cell transaction-item__cell--desktop transaction-item__cell--img-holder"
           >
             <img
-              src={`/src/assets/payment-options-logo/${method.logo}.svg`}
+              src={`/public/payment-options-logo/${method.logo}.svg`}
               alt="Payment method logo"
               className="transaction-item__header__logo"
             />

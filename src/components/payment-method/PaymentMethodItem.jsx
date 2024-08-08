@@ -16,7 +16,7 @@ const PaymentMethodItem = (props) => {
         </div>
       )}
       <img
-        src={`/src/assets/payment-options-logo/${logo}.svg`}
+        src={`/public/payment-options-logo/${logo}.svg`}
         alt="Payment method logo"
       />
       <p className="payment-method-item__title">

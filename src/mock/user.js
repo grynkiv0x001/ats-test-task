@@ -3,7 +3,7 @@ const user = {
   rate: 13,
   notifications: 2,
   profile: {
-    image: 'src/assets/user-photo.svg',
+    image: 'public/user-photo.svg',
   },
 };
 

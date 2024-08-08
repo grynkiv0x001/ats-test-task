@@ -34,7 +34,7 @@ const PaymentMethodSelect = (props) => {
       >
         <div className="payment-method-select__trigger__left">
           <img
-            src={`/src/assets/payment-options-logo/${selectedMethod.logo}.svg`}
+            src={`/public/payment-options-logo/${selectedMethod.logo}.svg`}
             alt="Selected method logo"
             className="payment-method-select__logo"
           />
