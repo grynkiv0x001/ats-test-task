@@ -1,6 +1,8 @@
 import Plus from '@/assets/icons/plus.svg?react';
 import ArrowDown from '@/assets/icons/arrow-down.svg?react';
 
+import { formatCurrency } from '@/helpers';
+
 import { IconButton } from '@/components/shared';
 
 import user from '@/mock/user';
@@ -8,10 +10,12 @@ import user from '@/mock/user';
 import './userProfile.scss';
 
 const UserProfile = () => {
+  const formattedCurrency = formatCurrency(user.balance, 'USD');
+
   return (
     <div className="user-profile">
       <div className="user-profile__balance-btn">
-        <p>{user.balance} $</p>
+        <p>{formattedCurrency}</p>
         <div className="balance-btn--rate">
           {user.rate}%
         </div>

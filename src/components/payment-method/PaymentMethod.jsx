@@ -11,7 +11,7 @@ import './paymentMethod.scss';
 const PaymentMethod = () => {
   const [showPaymentPopup, setShowPaymentPopup] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
-  const [selectMethod, setSelectedMethod] = useState(null);
+  const [selectedMethod, setSelectedMethod] = useState(null);
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -27,18 +27,33 @@ const PaymentMethod = () => {
 
   const isMobile = width <= 768;
 
+  const handleClose = () => {
+    setShowPaymentPopup(false);
+  };
+
+  const handleSelect = (item) => {
+    setShowPaymentPopup(true);
+    setSelectedMethod(item);
+  };
+
   return (
     <div className="payment-method">
       {showPaymentPopup && (
         <>
           {isMobile ? (
-            <PaymentMethodForm />
+            <PaymentMethodForm
+              handleClose={handleClose}
+              selectedMethod={selectedMethod}
+            />
           ) : (
             <Popup
-              closeHandler={() => setShowPaymentPopup(false)}
+              closeHandler={handleClose}
               showCloseBtn={false}
             >
-              <PaymentMethodForm />
+              <PaymentMethodForm
+                handleClose={handleClose}
+                selectedMethod={selectedMethod}
+              />
             </Popup>
           )}
         </>
@@ -56,8 +71,7 @@ const PaymentMethod = () => {
             <PaymentMethodItem
               key={item.id}
               card={item}
-              openPaymentPopup={() => setShowPaymentPopup(true)}
-              handleSelect={() => setSelectedMethod(item)}
+              openPaymentPopup={() => handleSelect(item)}
             />
           ))}
         </div>
@@ -73,8 +87,7 @@ const PaymentMethod = () => {
             <PaymentMethodItem
               key={item.id}
               card={item}
-              openPaymentPopup={() => setShowPaymentPopup(true)}
-              handleSelect={() => setSelectedMethod(item)}
+              openPaymentPopup={() => handleSelect(item)}
             />
           ))}
         </div>

@@ -23,7 +23,7 @@ const PaymentMethodItem = (props) => {
         {title}
       </p>
       <p className="payment-method-item__comission">
-        Comission {comission} %
+        Comission {comission}%
       </p>
     </button>
   );

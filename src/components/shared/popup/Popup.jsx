@@ -42,7 +42,7 @@ const Popup = (props) => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('eydown', handleEscapeKey);
+    document.addEventListener('keydown', handleEscapeKey);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);

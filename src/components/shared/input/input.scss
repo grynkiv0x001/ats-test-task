@@ -1,10 +1,13 @@
 .input {
+  box-sizing: border-box;
   padding: 8px 12px;
+  min-height: 42px;
   background-color: var(--clr-gray);
   border: none;
   border-radius: 4px;
   color: var(--clr-white);
   font-size: 14px;
+  font-weight: 600;
 
   &:focus {
     outline: 1px solid var(--clr-blue);

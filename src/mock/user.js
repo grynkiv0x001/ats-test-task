@@ -1,5 +1,5 @@
 const user = {
-  balance: 125.02,
+  balance: 12502,
   rate: 13,
   notifications: 2,
   profile: {

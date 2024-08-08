@@ -11,7 +11,11 @@ const Promo = () => {
       </p>
 
       <form className="promo__form">
-        <Input type="text" className="promo__form__input" />
+        <Input
+          type="text"
+          className="promo__form__input"
+          placeholder="Enter promo code here"
+        />
         <Button className="promo__form__submit">
           Apply
         </Button>

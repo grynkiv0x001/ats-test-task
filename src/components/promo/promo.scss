@@ -35,6 +35,10 @@
         outline: 1px solid var(--clr-blue);
       }
 
+      &::placeholder {
+        text-transform: none;
+      }
+
       @include responsive('medium') {
         width: 100%;
         max-width: 500px;
