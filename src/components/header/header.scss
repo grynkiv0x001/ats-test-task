@@ -1,20 +1,16 @@
 .header {
+  position: sticky;
+  top: 0;
   padding: 18px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color: var(--clr-main-bg);
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.72);
+  z-index: 101;
 
   @include responsive('large') {
-    // padding: 18px 120px;
-    &__left {
-      margin-left: 120px;
-    }
-
-    &__right {
-      margin-right: 120px;
-    }
+    padding: 18px 120px;
   }
 
   &__left {

@@ -5,11 +5,12 @@
   height: 100vh;
   width: 100%;
   background-color: var(--clr-main-bg);
-  z-index: 1;
+  z-index: 102;
 
   @include responsive('medium') {
     max-width: 600px;
     box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.02), 4px 4px 5px rgba(0, 0, 0, 0.05);
+    z-index: 101;
   }
 
   &__header {

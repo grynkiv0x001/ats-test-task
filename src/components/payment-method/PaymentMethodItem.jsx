@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
 const PaymentMethodItem = (props) => {
-  const { card } = props;
+  const { card, openPaymentPopup } = props;
   const { title, logo, comission, label } = card;
 
   return (
-    <button className="payment-method-item">
+    <button className="payment-method-item" onClick={openPaymentPopup}>
       {label && (
         <div
           className={
@@ -30,6 +30,7 @@ const PaymentMethodItem = (props) => {
 };
 
 PaymentMethodItem.propTypes = {
+  openPaymentPopup: PropTypes.func,
   card: PropTypes.shape({
     title: PropTypes.string,
     logo: PropTypes.string,
