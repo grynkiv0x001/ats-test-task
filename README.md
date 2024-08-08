@@ -23,3 +23,11 @@ Implement both desktop and mobile versions. Use React + SCSS (not modules). Appr
 
 ----
 Popup with a form and a dropdown (when clicking on a tile with a payment system).  
+
+### Next steps:
+
+  – add DB and API
+  - add API calls
+  - make forms & buttons usable
+  - (optionally) add Redux
+  - implement router
